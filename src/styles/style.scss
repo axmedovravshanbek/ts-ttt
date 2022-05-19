@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.nav {
+  cursor: pointer;
+  position: absolute;
+  top: 63px;
+  left: 75px;
+
+  &__menu {
+    transform-origin: 20% 10%;
+    background-color: #ffffff;
+    border-radius: 30px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+
+    a {
+      color: #000000;
+      text-decoration: none;
+      font-size: 24px;
+      padding: 24px;
+      background-color: white;
+
+      &.active {
+        color: #ffffff;
+        background-color: #0336FF;
+      }
+    }
+  }
+}
+
+.app {
+  transition: background-color 0.5s;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+
+  }
+}
+
+.game {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+
+  &__item {
+    cursor: pointer;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: 6px solid #ffffff;
+    transition: background-color 0.5s;
+
+    &:hover {
+      background-color: #0336FF55;
+    }
+
+    svg path {
+      stroke: #ffffff !important;
+    }
+
+    &-won {
+      svg path {
+        stroke: #FFDE03 !important;
+      }
+
+      background-color: #0336FF !important;
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__body {
+    background-color: #ffffff;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+  }
+
+  button {
+    font-family: unset;
+    padding: 12px 32px;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #0336FF;
+    border-radius: 30px;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s;
+
+    &:hover {
+      background-color: #4a6cff;
+    }
+  }
+}
+
+.cards {
+  position: relative;
+
+  &__item {
+    width: 182px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #0336FF;
+    border: 6px solid #FFFFFF;
+    border-radius: 29.617px;
+    left: -140px;
+    height: 300px;
+    top: -150px;
+    position: absolute;
+
+    &-drag {
+      z-index: 3;
+      top: -130px;
+    }
+
+    h3 {
+      font-size: 36px;
+      margin-left: 40px;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.slider-page {
+  width: 100vw;
+  display: flex;
+  padding: 0 100px;
+  justify-content: space-between;
+}
+
+.post {
+  background-color: #f00;
+  border-radius: 10px;
+  overflow: hidden;
+  background-size: cover;
+  height: 500px;
+  margin-bottom: 40px;
+  width: 625px;
+  display: flex;
+  align-items: flex-end;
+
+  &:first-child {
+    margin-top: 100px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-grow: 1;
+    padding: 18px;
+    background: #ffffff;
+  }
+
+  &__avatar {
+    margin-right: 18px;
+    background: #0336FF;
+    border-radius: 30px;
+    width: 50px;
+    height: 50px;
+  }
+
+  h5 {
+    margin: 12px 0;
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0336FF;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a6cff;
+}
